@@ -11,7 +11,7 @@ It was written with the following constraints in mind:
 
 
 Usage
-=====
+-----
 
 The equivalent Java ([Guava](https://code.google.com/p/guava-libraries/)) and 
 JavaScript are provided as an example:
@@ -42,7 +42,7 @@ Refer to the unit tests for more examples.
 
 
 Other JavaScript Implementations
-=================================
+--------------------------------
 
 *  [murmurhash-js](https://github.com/garycourt/murmurhash-js) only contains
    the 32bit variant.
