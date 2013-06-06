@@ -13,26 +13,29 @@ It was written with the following constraints in mind:
 Usage
 =====
 
-The equivalent Java (Guice) and JavaScript are provided as an example:
+The equivalent Java ([Guava](https://code.google.com/p/guava-libraries/)) and 
+JavaScript are provided as an example:
 
+Java ([Guava](http://guava-libraries.googlecode.com/git/guava/src/com/google/common/hash/Murmur3_128HashFunction.java)):
 ```java
-    final int seed = 0;
-    final byte[] bytes = { (byte)0xDE, (byte)0xAD, (byte)0xBE, (byte)0xEF,
-                           (byte)0xFE, (byte)0xED, (byte)0xFA, (byte)0xCE };
-    com.google.common.hash.HashFunction hashFunction = com.google.common.hash.Hashing.murmur3_128(seed);
-    com.google.common.hash.HashCode hashCode = hashFunction.newHasher()
-           .putBytes(bytes)
-           .hash();
-    System.err.println(hashCode.asLong());
+final int seed = 0;
+final byte[] bytes = { (byte)0xDE, (byte)0xAD, (byte)0xBE, (byte)0xEF,
+                       (byte)0xFE, (byte)0xED, (byte)0xFA, (byte)0xCE };
+com.google.common.hash.HashFunction hashFunction = com.google.common.hash.Hashing.murmur3_128(seed);
+com.google.common.hash.HashCode hashCode = hashFunction.newHasher()
+       .putBytes(bytes)
+       .hash();
+System.err.println(hashCode.asLong());
 ```
 
+JavaScript:
 ```javascript
-    var seed = 0;
-    var rawKey = new ArrayBuffer(8);
-        var byteView = new Int8Array(rawKey);
-            byteView[0] = 0xDE; byteView[1] = 0xAD; byteView[2] = 0xBE; byteView[3] = 0xEF;
-            byteView[4] = 0xFE; byteView[5] = 0xED; byteView[6] = 0xFA; byteView[7] = 0xCE;
-    console.log(murmur3.hash128(rawKey, seed));
+var seed = 0;
+var rawKey = new ArrayBuffer(8);
+    var byteView = new Int8Array(rawKey);
+        byteView[0] = 0xDE; byteView[1] = 0xAD; byteView[2] = 0xBE; byteView[3] = 0xEF;
+        byteView[4] = 0xFE; byteView[5] = 0xED; byteView[6] = 0xFA; byteView[7] = 0xCE;
+console.log(murmur3.hash128(rawKey, seed));
 ```
 
 Refer to the unit tests for more examples.
