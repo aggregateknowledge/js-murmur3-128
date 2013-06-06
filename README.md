@@ -10,6 +10,20 @@ It was written with the following constraints in mind:
 2.  It must be usable in the browser
 
 
+Notes
+-----
+
+Under the covers this implementation uses [Closure Library's](https://code.google.com/p/closure-library/)
+[goog.math.Long](https://code.google.com/p/closure-library/source/browse/closure/goog/math/long.js).
+Either the entire Closure library can be included or a dependency free 
+[copy](https://github.com/aggregateknowledge/js-murmur3-128/blob/master/test/lib/goog.math.Long.js) 
+can be used.
+
+Performance tests have not yet been run. There are places in which there are a 
+few different ways to use `goog.math.Long` which may affect performance. These
+have not yet been investigated (though some of them have been noted).
+
+
 Usage
 -----
 
