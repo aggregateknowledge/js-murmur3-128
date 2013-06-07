@@ -10,6 +10,13 @@ It was written with the following constraints in mind:
 2.  It must be usable in the browser
 
 
+Latest Version
+---------------
+
+*  [v1.0.0](https://github.com/aggregateknowledge/js-murmur3-128/blob/master/js-murmur3-128-1.0.0.js)
+*  [v1.0.0 (minified)](https://github.com/aggregateknowledge/js-murmur3-128/blob/master/js-murmur3-128-1.0.0.min.js)
+
+
 Notes
 -----
 
