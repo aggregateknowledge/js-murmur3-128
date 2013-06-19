@@ -78,9 +78,10 @@
                                     <fileset dir="src" includes="**/*" />
                                     <fileset dir="test" includes="**/*" />
                                 </copy>
-                                <copy todir="${project.build.directory}/scripts">
+                                <!-- NOTE:  uncomment if qunit-test.html is changed -->
+                                <!-- copy todir="${project.build.directory}/scripts">
                                     <fileset dir="" includes="**/js-murmur3-128-*.min.js" />
-                                </copy>
+                                </copy -->
                                 <!-- finally, remove the temporary 'min' directory -->
                                 <delete dir="min" includeemptydirs="true"></delete>
                             </target>
