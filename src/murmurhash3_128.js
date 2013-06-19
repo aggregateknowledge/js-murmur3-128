@@ -88,12 +88,13 @@ if(murmur3 === undefined) {
 
     // =========================================================================
     /**
-     * @param  key an {@link ArrayBuffer} that is to be hashed. If not specified
-     *         then a zero length buffer is used.
-     * @param  seed a 32bit seed value. If not specified then 0 is used.
-     * @return the first 8 bytes of the hash result as a {@link Long} (to match
-     *         that of {@link http://guava-libraries.googlecode.com/git/guava/src/com/google/common/hash/Murmur3_128HashFunction.java Guava's}
-     *         {@link #asLong()}).
+     * @param {ArrayBuffer} [key=0] the key (as an <code>ArrayBuffer</code>) 
+     *        that is to be hashed.
+     * @param {Number} [seed=0] a 32bit seed value.
+     * @returns {goog.math.Long} the first 8 bytes of the hash result as a 
+     *          <code>goog.math.Long</code> (to match that of
+     *          {@link http://guava-libraries.googlecode.com/git/guava/src/com/google/common/hash/Murmur3_128HashFunction.java Guava's}
+     *          <code>asLong()</code>).
      */
     murmur3.hash128 = function(key, seed) {
         key = key || new ArrayBuffer(0/*by contract*/)/*default*/;
